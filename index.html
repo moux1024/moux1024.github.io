@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+      p {
+        margin: 0;
+        padding: 0;
+        white-space: nowrap
+      }
+
+      .black {
+        color: black;
+        position: fixed;
+      }
+
+      .white {
+        color: #fff;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        height: 20px;
+        overflow: hidden;
+      }
+
+      .box {
+        height: 20px;
+        position: relative;
+        background: black;
+        top: 0;
+        overflow: hidden;
+        transition: width 2s;
+      }
+
+      .box0 {
+        width: 0px;
+      }
+
+      .box1 {
+        width: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>我在这里实现一些偶尔想到的CSS效果，比如下面这个</p>
+    <div class="container">
+      <p class="black">U CAN SEE ME!</p>
+      <div class="box box0">
+        <p class="white">U CAN SEE ME!</p>
+      </div>
+    </div>
+    <button onclick="try1()">看效果</button>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      function try1() {
+        $(".box").toggleClass("box1");
+      }
+    </script>
+  </body>
+
+</html>
