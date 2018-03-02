@@ -1,290 +1,326 @@
-@import "variable";
-html,body{
-   margin: 0;
-   padding: 0;
-   height: $bai;
-   overflow: hidden;
- }
- input,select,button{
- 	outline:none;
- }
- .wrap{
+@import "variable.scss";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: $bai;
+  overflow: hidden;
+}
+
+button,
+input,
+select {
+  outline: none;
+}
+
+.wrap {
   height: $bai;
   background: #fff;
 }
-.emblem{
-	z-index: 2;
+
+.emblem {
+  z-index: 2;
   @extend %poa;
   @include width(60);
   @include top(35);
   @include left(35);
-  img{
+
+  img {
     @include width(60);
   }
 }
-.get{
-	display: none;
-}
-.img{
-	@extend %por;
-	z-index: 1;
-	height: 50%;
-	background-repeat:no-repeat;
-	background-size: cover;
-	.shu{
-		@extend %poa;
-		@extend %lrauto;
-		@extend %tbauto;
-		display: inline-block;
-		background: #FAFAFA;
-		@include width(6);
-		@include height(60);
-		@include borderRadius(100);
-	}
-	.heng{
-		@extend %poa;
-		@extend %lrauto;
-		@extend %tbauto;
-		display: inline-block;
-		background: #FAFAFA;
-		@include width(60);
-		@include height(6);
-		@include borderRadius(100);
-		overflow: hidden;
-	}
-	img{
-		width: $bai;
-	}
-}
-.dashed{
-	z-index: 1;
-	width:$bai;
-	border-top:(1/$px)+rem dashed #ECECEC;
-	@extend %por;
-	@include height(2);
-}
-.upload{
-	font-family: "PingFangSC-Medium","Microsoft YaHei","Heiti SC";
-	z-index: 2;
-	@extend %por;
-	@extend %lrauto;
-	@extend %tc;
-	@extend %bgc;
-	@extend %cff;
-	@include mt(-16);
-	@include width(111);
-	@include height(36);
-	@include fsz(12);
-	@include borderRadius(100);
-	input{
-		opacity: 0;
-		@include width(111);
-		@include height(36);
-		@include borderRadius(100);
-	}
-	div{
-		@extend %poa;
-		@extend %lrauto;
-		@include width(111);
-		@include height(36);
-		@include lineheight(36);
-		@include borderRadius(100);
-	}
-}
-.name{
-	@extend %por;
-	@extend %lrauto;
-	@include mt(20);
-	@include width(272);
-	@include height(36);
-	font-family:"PingFangSC-Regular";
-	overflow: hidden;
-	input{
-		border:none;
-		background-color:#FAFAFA;
-		color:#999999;
-		@include width(272);
-		@include height(36);
-		@include fsz(12);
-	}
-}
-.type{
-	@extend %por;
-	@extend %lrauto;
-	@include mt(20);
-	@include width(272);
-	@include height(36);
-	font-family:"PingFangSC-Regular","Microsoft YaHei","Heiti SC";
-	select{
-		border:none;
-		background-color:#FAFAFA;
-		color:#999999;
-		-moz-appearance:none;
-		-webkit-appearance:none;
-		@include width(272);
-		@include height(36);
-		@include fsz(12);
-	}
-	&:after {
-		content: " ";
-	  	display: inline-block;
-      	@include width(6);
-		@include height(6);
-      	border-width: (2/$px)+rem (2/$px)+rem 0 0;
-      	border-color: #C8C8CD;
-      	border-style: solid;
-      	-webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-      	transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-      	position: relative;
-      	@include top(-2);
-      	position: absolute;
-      	top: 50%;
-      	@include right(15);
-      	@include mt(-4);
-	  }
-}
-.date{
-	display: none;
-	@extend %por;
-	@extend %lrauto;
-	@include mt(20);
-	@include width(272);
-	@include height(36);
-	font-family:"PingFangSC-Regular","Microsoft YaHei","Heiti SC";
-	input{
-		border:none;
-		background-color:#FAFAFA;
-		color:#999999;
-		-moz-appearance:none;
-		-webkit-appearance:none;
-		@include width(272);
-		@include height(36);
-		@include fsz(12);
-	}
-}
-.erro{
-	position: fixed;
-	color: red;
-	width:$bai;
-	@extend %tc;
-	@include bottom(45);
-	@include fsz(12);
-}
-.generate{
-	width:$bai;
-	position: fixed;
-	border:0;
-	bottom: 0;
-	font-family: "PingFangSC-Medium","Microsoft YaHei","Heiti SC";
-	@extend %bgc;
-	@extend %cff;
-	@extend %tc;
-	@include height(45);
-	@include lineheight(45);
-	@include fsz(15);
-}
-.timing{
-	z-index: 2;
-	text-align: right;
-	font-family: "DIN-Bold","Microsoft YaHei","Heiti SC";
-	@extend %por;
-	@include mt(-16);
-	@include right(25);
-	span{
-		display: inline-block;
-		background-image: linear-gradient(-180deg, #CD3939 0%, #CD3939 50%, #E53737 50%, #C53838 100%);
-		box-shadow: 0 (2/32.5)+rem (4/32.5)+rem (-1/32.5)+rem rgba(208,24,7,0.50);
-		@extend %tc;
-		@extend %cff;
-		@include borderRadius(2);
-		@include width(26);
-		@include height(36);
-		@include fsz(28.8);
-		@include lineheight(36);
-		@include mb(5);
-	}
-	div{
-		@extend %poa;
-		@include right(-18.19);
-		@include fsz(10.08);
-		@include letterSpacing(24.19);
-	}
-}
-.text{
-	@extend %por;
-	@include ml(35);
-	.textName{
-		font-family: "PingFangSC-Semibold","Microsoft YaHei","Heiti SC";
-		font-weight: 700;
-		@include fsz(24);
-		@include lineheight(36);
-	}
-	.textTime{
-		@include fsz(14);
-		@include lineheight(22);
-		@include letterSpacing(0.56);
-	}
-}
-.qr{
-	@extend %por;
-	@include mt(15);
-	@include mb(10);
-	.qr_img{
-		@include width(70);
-		@include height(73);
-		img{
-			width: $bai;
-			height: $bai;
-		}
-	}
-	.qr_text{
-		font-family: "PingFangSC-Regular","Microsoft YaHei","Heiti SC";
-		@extend %poa;
-		@include left(80);
-		bottom:0;
-	}
+
+.get {
+  display: none;
 }
 
-.download{
-	display:none;
-	@extend %poa;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width:$bai;
-	height: $bai;
-	z-index:10;
-	overflow: hidden;
+.img {
+  @extend %por;
+  z-index: 1;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .shu {
+    @extend %poa;
+    @extend %lrauto;
+    @extend %tbauto;
+    display: inline-block;
+    background: #FAFAFA;
+    @include width(6);
+    @include height(60);
+    @include borderRadius(100);
+  }
+
+  .heng {
+    @extend %poa;
+    @extend %lrauto;
+    @extend %tbauto;
+    display: inline-block;
+    background: #FAFAFA;
+    @include width(60);
+    @include height(6);
+    @include borderRadius(100);
+    overflow: hidden;
+  }
+
+  img {
+    width: $bai;
+  }
 }
 
-.save{
-	//display:none;
-	@extend %poa;
-	z-index: 11;
-	@extend %lrauto;
-	@extend %tc;
-	// @include height(55);
-	// @include lineheight(55);
-	@include fsz(12);
-	// @include bottom(-55);
-	@include bottom(0);
-	background:#BCB8B8;
-	transition:all linear 0.7s;
-	-moz-transition:all linear 0.7s;
-	-webkit-transition:all linear 0.7s;
-	-o-transition:all linear 0.7s;
-	overflow:hidden;
+.dashed {
+  z-index: 1;
+  width: $bai;
+  border-top: (1/$px)+rem dashed #ECECEC;
+  @extend %por;
+  @include height(2);
 }
-.hei55{
-	// bottom:0;
-	@include height(55);
-	@include lineheight(55);
 
-	
+.upload {
+  font-family: "PingFangSC-Medium","Microsoft YaHei","Heiti SC";
+  z-index: 2;
+  @extend %por;
+  @extend %lrauto;
+  @extend %tc;
+  @extend %bgc;
+  @extend %cff;
+  @include mt(-16);
+  @include width(111);
+  @include height(36);
+  @include fsz(12);
+  @include borderRadius(100);
+
+  input {
+    opacity: 0;
+    @include width(111);
+    @include height(36);
+    @include borderRadius(100);
+  }
+
+  div {
+    @extend %poa;
+    @extend %lrauto;
+    @include width(111);
+    @include height(36);
+    @include lineheight(36);
+    @include borderRadius(100);
+  }
 }
-.hei0{
-	// @include bottom(-55);
-	@include height(0);
-	opacity:0
+
+.name {
+  @extend %por;
+  @extend %lrauto;
+  @include mt(20);
+  @include width(272);
+  @include height(36);
+  font-family: "PingFangSC-Regular";
+  overflow: hidden;
+
+  input {
+    border: none;
+    background-color: #FAFAFA;
+    color: #999999;
+    @include width(272);
+    @include height(36);
+    @include fsz(12);
+  }
+}
+
+.type {
+  @extend %por;
+  @extend %lrauto;
+  @include mt(20);
+  @include width(272);
+  @include height(36);
+  font-family: "PingFangSC-Regular","Microsoft YaHei","Heiti SC";
+
+  select {
+    border: none;
+    background-color: #FAFAFA;
+    color: #999999;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    @include width(272);
+    @include height(36);
+    @include fsz(12);
+  }
+
+  &:after {
+    content: " ";
+    display: inline-block;
+    @include width(6);
+    @include height(6);
+    border-width: (2/$px)+rem (2/$px)+rem 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    @include top(-2);
+    position: absolute;
+    top: 50%;
+    @include right(15);
+    @include mt(-4);
+  }
+}
+
+.date {
+  // display: none;
+  @extend %por;
+  @extend %lrauto;
+  @include mt(20);
+  @include width(272);
+  @include height(36);
+  font-family: "PingFangSC-Regular","Microsoft YaHei","Heiti SC";
+
+  input {
+    border: none;
+    background-color: #FAFAFA;
+    color: #999999;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    @include width(272);
+    @include height(36);
+    @include fsz(12);
+  }
+}
+
+.erro {
+  position: fixed;
+  color: red;
+  width: $bai;
+  @extend %tc;
+  @include bottom(45);
+  @include fsz(12);
+}
+
+.generate {
+  width: $bai;
+  position: fixed;
+  border: 0;
+  bottom: 0;
+  font-family: "PingFangSC-Medium","Microsoft YaHei","Heiti SC";
+  @extend %bgc;
+  @extend %cff;
+  @extend %tc;
+  @include height(45);
+  @include lineheight(45);
+  @include fsz(15);
+}
+
+.timing {
+  z-index: 2;
+  text-align: right;
+  font-family: "DIN-Bold","Microsoft YaHei","Heiti SC";
+  @extend %por;
+  @include mt(-16);
+  @include right(25);
+
+  span {
+    display: inline-block;
+    background-image: linear-gradient(-180deg, #CD3939 0%, #CD3939 50%, #E53737 50%, #C53838 100%);
+    box-shadow: 0 (2/32.5)+rem (4/32.5)+rem (-1/32.5)+rem rgba(208,24,7,0.50);
+    @extend %tc;
+    @extend %cff;
+    @include borderRadius(2);
+    @include width(26);
+    @include height(36);
+    @include fsz(28.8);
+    @include lineheight(36);
+    @include mb(5);
+  }
+
+  div {
+    @extend %poa;
+    @include right(-18.19);
+    @include fsz(10.08);
+    @include letterSpacing(24.19);
+  }
+}
+
+.text {
+  @extend %por;
+  @include ml(35);
+
+  .textName {
+    font-family: "PingFangSC-Semibold","Microsoft YaHei","Heiti SC";
+    font-weight: 700;
+    @include fsz(24);
+    @include lineheight(36);
+  }
+
+  .textTime {
+    @include fsz(14);
+    @include lineheight(22);
+    @include letterSpacing(0.56);
+  }
+}
+
+.qr {
+  @extend %por;
+  @include mt(15);
+  @include mb(10);
+
+  .qr_img {
+    @include width(70);
+    @include height(73);
+
+    img {
+      width: $bai;
+      height: $bai;
+    }
+  }
+
+  .qr_text {
+    font-family: "PingFangSC-Regular","Microsoft YaHei","Heiti SC";
+    @extend %poa;
+    @include left(80);
+    bottom: 0;
+  }
+}
+
+.download {
+  display: none;
+  @extend %poa;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: $bai;
+  height: $bai;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.save {
+  //display:none;
+  @extend %poa;
+  z-index: 11;
+  @extend %lrauto;
+  @extend %tc;
+  // @include height(55);
+  // @include lineheight(55);
+  @include fsz(12);
+  // @include bottom(-55);
+  @include bottom(0);
+  background: #BCB8B8;
+  transition: all linear 0.7s;
+  -moz-transition: all linear 0.7s;
+  -webkit-transition: all linear 0.7s;
+  -o-transition: all linear 0.7s;
+  overflow: hidden;
+}
+
+.hei55 {
+  // bottom:0;
+  @include height(55);
+  @include lineheight(55);
+}
+
+.hei0 {
+  // @include bottom(-55);
+  @include height(0);
+  opacity: 0;
 }
