@@ -10,7 +10,7 @@
 		    color:#A9A9A9;
 		    content:attr(placeholder);
 		}
-		
+
 		input[type="date"].full:before {
 		    color:black;
 		    content:""!important;
@@ -22,7 +22,7 @@
 		<div class="emblem">
             <img src="img/emblem.png" />
         </div>
-        <div class="img">
+        <div class="img" style="overflow:hidden">
         	<span class="shu"></span>
         	<span class="heng"></span>
         </div>
@@ -34,7 +34,7 @@
         	</div>
 			<div class="name"><input id="name" type="text" placeholder="姓名"></div>
 			<div class="type">
-				<select id="type" onchange="selects(this.value)">					
+				<select id="type" onchange="selects(this.value)">
 					 <option value='yes'>我是社工</option>
 					<option value='no' selected>我不是社工</option>
 				</select>
