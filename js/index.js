@@ -28,11 +28,11 @@ function transformFileToDataUrl(file) {
 
 function selects(selected) {
 	switch (selected) {
-		case 'yes':
-			date.style.display = 'block';
+		case 'no':
+			date.style.display = 'none';
 			break;
 		default:
-			date.style.display = 'none';
+			date.style.display = 'block';
 			break
 	}
 }
