@@ -1,64 +1,83 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <style type="text/css">
-      p {
-        margin: 0;
-        padding: 0;
-        white-space: nowrap
-      }
-
-      .black {
-        color: black;
-        position: fixed;
-      }
-
-      .white {
-        color: #fff;
-        position: absolute;
-        top: 0;
-        z-index: 3;
-        height: 20px;
-        overflow: hidden;
-      }
-
-      .box {
-        height: 20px;
-        position: relative;
-        background: black;
-        top: 0;
-        overflow: hidden;
-        transition: width 2s;
-      }
-
-      .box0 {
-        width: 0px;
-      }
-
-      .box1 {
-        width: 120px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <h2>这里是moux的自留地，偶尔会写一些突然想到的CSS效果</p>
-    <div class="container">
-      <p class="black">U CAN SEE ME!</p>
-      <div class="box box0">
-        <p class="white">U CAN SEE ME!</p>
-      </div>
-    </div>
-    <button onclick="try1()">看效果</button>
-    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
-    <script type="text/javascript">
-      function try1() {
-        $(".box").toggleClass("box1");
-      }
-    </script>
-  </body>
-
+	<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/flexible.js"></script>
+	<link rel="stylesheet" href="scss/index.css" />
+	<title>我是明星</title>
+	<style>
+		input[type="date"]:before{
+		    color:#A9A9A9;
+		    content:attr(placeholder);
+		}
+		
+		input[type="date"].full:before {
+		    color:black;
+		    content:""!important;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="emblem">
+            <img src="img/emblem.png" />
+        </div>
+        <div class="img">
+        	<span class="shu"></span>
+        	<span class="heng"></span>
+        </div>
+        <div class="set">
+        	<div class="dashed"></div>
+        	<div class="upload">
+        		<div>上传照片</div>
+        		<input type="file" id="file-input" name="image" accept="image/*" />
+        	</div>
+			<div class="name"><input id="name" type="text" placeholder="姓名"></div>
+			<div class="type">
+				<select id="type" onchange="selects(this.value)">					
+					 <option value='yes'>我是社工</option>
+					<option value='no' selected>我不是社工</option>
+				</select>
+			</div>
+			<div class="date"><input type="date" id="date" placeholder="加入日期" onchange="dates(this)"></div>
+			<div class="erro"></div>
+			<button class="generate" onclick="generate()">立即生成</button>
+        </div>
+        <div class="get">
+        	<div class="timing yes_t">
+        		<span class="qian"></span>
+        		<span class="bai"></span>
+        		<span class="shi"></span>
+        		<span class="ge"></span>
+        		<div class="yes_t">DAYS</div>
+        	</div>
+        	<div class="text">
+        		<div class="textName">
+        			<div class='get_name'></div>
+					<div>我为青少年事务社工<span class="yes_t1">代言</span></div>
+					<div class="call">打CALL</div>
+        		</div>
+        		<div class="textTime">
+        			<div style="font-family: 'DIN-Regular','Microsoft YaHei','Heiti SC'">2018年3月20日</div>
+					<div style="font-family:'PingFangSC-Regular','Microsoft YaHei','Heiti SC'">世界社会工作日</div>
+					<div style="font-family:'PingFangSC-Regular','Microsoft YaHei','Heiti SC'" class="yes_t get_date"></div>
+        		</div>
+        		<div class="qr">
+        			<div class="qr_img">
+        				<img src="img/qr.png">
+        			</div>
+        			<div class="qr_text">
+        				<div>扫描二维码</div>
+						<div>制作属于你的社工日历</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="save hei0">长按保存图片分享到朋友圈</div>
+	</div>
+	<div class="download"></div>
+	<script type="text/javascript" src="js/canvas2image.js"></script>
+	<script type="text/javascript" src="js/html2canvas.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>

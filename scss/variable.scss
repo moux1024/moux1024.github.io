@@ -1,0 +1,63 @@
+$px:32.5;
+$bai:100%;
+%cff{color: #fff}
+%bgc{background-color: #D33838}
+%poa{position: absolute}
+%por{position: relative}
+%tc{text-align: center;}
+%lrauto{
+  left: 0;
+  right: 0;
+  margin-left:auto;
+  margin-right:auto;
+}
+%tbauto{
+  top: 0;
+  bottom: 0;
+  margin-bottom:auto;
+  margin-top:auto;
+}
+@mixin width($ps){
+  width:($ps/$px)+rem;
+}
+@mixin height($ps){
+  height:($ps/$px)+rem;
+}
+@mixin lineheight($ps){
+  line-height:($ps/$px)+rem;
+}
+@mixin mt($ps){
+  margin-top:($ps/$px)+rem;
+}
+@mixin mb($ps){
+  margin-bottom:($ps/$px)+rem;
+}
+@mixin ml($ps){
+  margin-left:($ps/$px)+rem;
+}
+@mixin mr($ps){
+  margin-right:($ps/$px)+rem;
+}
+@mixin pl($ps){
+  padding-left:($ps/$px)+rem;
+}
+@mixin top($ps){
+  top:($ps/$px)+rem;
+}
+@mixin bottom($ps){
+  bottom:($ps/$px)+rem;
+}
+@mixin left($ps){
+  left:($ps/$px)+rem;
+}
+@mixin right($ps){
+  right:($ps/$px)+rem;
+}
+@mixin fsz($ps) {
+  font-size: ($ps/$px)+rem;
+}
+@mixin borderRadius($ps) {
+  border-radius: ($ps/$px)+rem;
+}@mixin letterSpacing($ps) {
+  letter-spacing: ($ps/$px)+rem;
+}

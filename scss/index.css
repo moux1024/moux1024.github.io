@@ -1,0 +1,253 @@
+.upload, .generate, .timing span {
+  color: #fff; }
+
+.upload, .generate {
+  background-color: #D33838; }
+
+.emblem, .img .shu, .img .heng, .upload div, .timing div, .qr .qr_text, .download, .save {
+  position: absolute; }
+
+.img, .dashed, .upload, .name, .type, .date, .timing, .text, .qr {
+  position: relative; }
+
+.upload, .erro, .generate, .timing span, .save {
+  text-align: center; }
+
+.img .shu, .img .heng, .upload, .upload div, .name, .type, .date, .save {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.img .shu, .img .heng {
+  top: 0;
+  bottom: 0;
+  margin-bottom: auto;
+  margin-top: auto; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; }
+
+input, select, button {
+  outline: none; }
+
+.wrap {
+  height: 100%;
+  background: #fff; }
+
+.emblem {
+  z-index: 2;
+  width: 1.8461538462rem;
+  top: 1.0769230769rem;
+  left: 1.0769230769rem; }
+  .emblem img {
+    width: 1.8461538462rem; }
+
+.get {
+  display: none; }
+
+.img {
+  z-index: 1;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .img .shu {
+    display: inline-block;
+    background: #FAFAFA;
+    width: 0.1846153846rem;
+    height: 1.8461538462rem;
+    border-radius: 3.0769230769rem; }
+  .img .heng {
+    display: inline-block;
+    background: #FAFAFA;
+    width: 1.8461538462rem;
+    height: 0.1846153846rem;
+    border-radius: 3.0769230769rem;
+    overflow: hidden; }
+  .img img {
+    width: 100%; }
+
+.dashed {
+  z-index: 1;
+  width: 100%;
+  border-top: 0.0307692308rem dashed #ECECEC;
+  height: 0.0615384615rem; }
+
+.upload {
+  font-family: "PingFangSC-Medium","Microsoft YaHei","Heiti SC";
+  z-index: 2;
+  margin-top: -0.4923076923rem;
+  width: 3.4153846154rem;
+  height: 1.1076923077rem;
+  font-size: 0.3692307692rem;
+  border-radius: 3.0769230769rem; }
+  .upload input {
+    opacity: 0;
+    width: 3.4153846154rem;
+    height: 1.1076923077rem;
+    border-radius: 3.0769230769rem; }
+  .upload div {
+    width: 3.4153846154rem;
+    height: 1.1076923077rem;
+    line-height: 1.1076923077rem;
+    border-radius: 3.0769230769rem; }
+
+.name {
+  margin-top: 0.6153846154rem;
+  width: 8.3692307692rem;
+  height: 1.1076923077rem;
+  font-family: "PingFangSC-Regular";
+  overflow: hidden; }
+  .name input {
+    border: none;
+    background-color: #FAFAFA;
+    color: #999999;
+    width: 8.3692307692rem;
+    height: 1.1076923077rem;
+    font-size: 0.3692307692rem; }
+
+.type {
+  margin-top: 0.6153846154rem;
+  width: 8.3692307692rem;
+  height: 1.1076923077rem;
+  font-family: "PingFangSC-Regular","Microsoft YaHei","Heiti SC"; }
+  .type select {
+    border: none;
+    background-color: #FAFAFA;
+    color: #999999;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 8.3692307692rem;
+    height: 1.1076923077rem;
+    font-size: 0.3692307692rem; }
+  .type:after {
+    content: " ";
+    display: inline-block;
+    width: 0.1846153846rem;
+    height: 0.1846153846rem;
+    border-width: 0.0615384615rem 0.0615384615rem 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -0.0615384615rem;
+    position: absolute;
+    top: 50%;
+    right: 0.4615384615rem;
+    margin-top: -0.1230769231rem; }
+
+.date {
+  display: none;
+  margin-top: 0.6153846154rem;
+  width: 8.3692307692rem;
+  height: 1.1076923077rem;
+  font-family: "PingFangSC-Regular","Microsoft YaHei","Heiti SC"; }
+  .date input {
+    border: none;
+    background-color: #FAFAFA;
+    color: #999999;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 8.3692307692rem;
+    height: 1.1076923077rem;
+    font-size: 0.3692307692rem; }
+
+.erro {
+  position: fixed;
+  color: red;
+  width: 100%;
+  bottom: 1.3846153846rem;
+  font-size: 0.3692307692rem; }
+
+.generate {
+  width: 100%;
+  position: fixed;
+  border: 0;
+  bottom: 0;
+  font-family: "PingFangSC-Medium","Microsoft YaHei","Heiti SC";
+  height: 1.3846153846rem;
+  line-height: 1.3846153846rem;
+  font-size: 0.4615384615rem; }
+
+.timing {
+  z-index: 2;
+  text-align: right;
+  font-family: "DIN-Bold","Microsoft YaHei","Heiti SC";
+  margin-top: -0.4923076923rem;
+  right: 0.7692307692rem; }
+  .timing span {
+    display: inline-block;
+    background-image: linear-gradient(-180deg, #CD3939 0%, #CD3939 50%, #E53737 50%, #C53838 100%);
+    box-shadow: 0 0.0615384615rem 0.1230769231rem -0.0307692308rem rgba(208, 24, 7, 0.5);
+    border-radius: 0.0615384615rem;
+    width: 0.8rem;
+    height: 1.1076923077rem;
+    font-size: 0.8861538462rem;
+    line-height: 1.1076923077rem;
+    margin-bottom: 0.1538461538rem; }
+  .timing div {
+    right: -0.5596923077rem;
+    font-size: 0.3101538462rem;
+    letter-spacing: 0.7443076923rem; }
+
+.text {
+  margin-left: 1.0769230769rem; }
+  .text .textName {
+    font-family: "PingFangSC-Semibold","Microsoft YaHei","Heiti SC";
+    font-weight: 700;
+    font-size: 0.7384615385rem;
+    line-height: 1.1076923077rem; }
+  .text .textTime {
+    font-size: 0.4307692308rem;
+    line-height: 0.6769230769rem;
+    letter-spacing: 0.0172307692rem; }
+
+.qr {
+  margin-top: 0.4615384615rem;
+  margin-bottom: 0.3076923077rem; }
+  .qr .qr_img {
+    width: 2.1538461538rem;
+    height: 2.2461538462rem; }
+    .qr .qr_img img {
+      width: 100%;
+      height: 100%; }
+  .qr .qr_text {
+    font-family: "PingFangSC-Regular","Microsoft YaHei","Heiti SC";
+    left: 2.4615384615rem;
+    bottom: 0; }
+
+.download {
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden; }
+
+.save {
+  z-index: 11;
+  font-size: 0.3692307692rem;
+  bottom: 0rem;
+  background: #BCB8B8;
+  transition: all linear 0.7s;
+  -moz-transition: all linear 0.7s;
+  -webkit-transition: all linear 0.7s;
+  -o-transition: all linear 0.7s;
+  overflow: hidden; }
+
+.hei55 {
+  height: 1.6923076923rem;
+  line-height: 1.6923076923rem; }
+
+.hei0 {
+  height: 0rem;
+  opacity: 0; }
+
+/*# sourceMappingURL=index.css.map */
